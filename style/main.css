@@ -256,9 +256,40 @@ body {
 .container > .app > .mobile > .screen > .chat .offer {
   width: 75%;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--white);
   border-radius: 10px;
   border-bottom-left-radius: 0;
+  background: -webkit-gradient(linear, left top, right top, from(var(--light-magenta)), to(var(--light-violet)));
+  background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+}
+
+.container > .app > .mobile > .screen > .chat .offer > input[type="radio"] {
+  margin: 0;
+  opacity: 0;
+}
+
+.container > .app > .mobile > .screen > .chat .offer > input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--light-violet);
+}
+
+.container > .app > .mobile > .screen > .chat .offer > label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,59 +299,22 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: -webkit-gradient(linear, left top, right top, from(var(--light-magenta)), to(var(--light-violet)));
-  background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
-}
-
-.container > .app > .mobile > .screen > .chat .offer > .time {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 7px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container > .app > .mobile > .screen > .chat .offer > .time > .radio-input[type="radio"] {
-  display: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-.container > .app > .mobile > .screen > .chat .offer > .time > .radio-input[type="radio"]:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 2.5px;
-  left: 2.5px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--light-violet);
-}
-
-.container > .app > .mobile > .screen > .chat .offer > .time > .radio-input[type="radio"] + label {
   position: relative;
-  width: 10px;
-  height: 10px;
-  padding-left: 10px;
 }
 
-.container > .app > .mobile > .screen > .chat .offer > .time > .radio-input[type="radio"] + label::before {
+.container > .app > .mobile > .screen > .chat .offer > label::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 10px;
-  height: 10px;
+  top: 2.9px;
+  left: -17px;
+  width: 11px;
+  height: 11px;
   cursor: pointer;
   border-radius: 50%;
-  border: 1px solid var(--radio-button-outline);
+  outline: 1px solid var(--radio-button-outline);
 }
 
-.container > .app > .mobile > .screen > .chat .offer > .price {
+.container > .app > .mobile > .screen > .chat .offer > label > .price {
   font-size: 12px;
   font-weight: bold;
 }
