@@ -44,7 +44,3 @@ These two colors are the vibrant background colors you see throughout the design
 
 - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
 - Weights: 400, 500, 700
-
-## Ideas to test yourself
-
-- Add loading animations for the chat app UI
